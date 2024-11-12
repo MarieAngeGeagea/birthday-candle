@@ -72,8 +72,8 @@
     </div>
   </div>
   
-  <!-- Embed YouTube video for the Happy Birthday song -->
-  <iframe id="song" width="0" height="0" src="https://www.youtube.com/embed/90w2RegGf9w?autoplay=1&start=0&controls=0" frameborder="0" allow="autoplay"></iframe>
+  <!-- Play MP3 file instead of YouTube video -->
+  <audio id="song" src="Happy Birthday To You - THE KIBOOMERS Birthday Party Song for Kids.mp3" autoplay></audio>
 
   <script>
     // Function to simulate the "blow" to extinguish the candle
@@ -82,7 +82,7 @@
 
     function extinguishCandle() {
       flame.style.display = "none";
-      song.src = "";  // Stop YouTube video
+      song.pause();  // Stop the MP3 song
       alert("Happy Birthday!");
     }
 
