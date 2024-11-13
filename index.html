@@ -63,6 +63,21 @@
       0%, 100% { transform: translateX(-50%) scale(1); }
       50% { transform: translateX(-50%) scale(1.1); }
     }
+        /* Style and position the play button below the cake */
+    #playMusicButton {
+      margin-top: 50px; /* Adds space between cake and button */
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #playMusicButton:active {
+      background-color: #ff3a8c;
+    }
   </style>
 </head>
 <body>
@@ -82,6 +97,11 @@
     const flame = document.getElementById("flame");
     const song = document.getElementById("song");
     const playMusicButton = document.getElementById("playMusicButton");
+
+    function startMusic() {
+      song.play(); // Start the music
+      playMusicButton.style.display = "none"; // Hide the button once the music starts
+    }
 
     function extinguishCandle() {
       flame.style.display = "none";
