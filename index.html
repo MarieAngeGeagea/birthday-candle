@@ -101,15 +101,15 @@
           analyser.getByteFrequencyData(dataArray);
           let blowStrength = dataArray.reduce((a, b) => a + b, 0);
           console.log("Blow strength:", blowStrength);
-          if (blowStrength > 5000) { // Adjust threshold as necessary
+          if (blowStrength > 10000) { // Adjust threshold as necessary
             extinguishCandle();
             stream.getTracks().forEach(track => track.stop()); // Stop microphone
           } else {
             requestAnimationFrame(checkBlow);
           }
         }
-        setTimeout(checkBlow, 3000);
-       // checkBlow();
+       // setTimeout(checkBlow, 3000);
+        checkBlow();
       } catch (err) {
         console.error("Microphone access denied or not supported.");
       }
