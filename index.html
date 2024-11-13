@@ -71,14 +71,17 @@
       <div id="flame"></div>
     </div>
   </div>
-  
+
+  <!-- Add a button to start the music manually -->
+  <button id="playMusicButton" onclick="startMusic()">Play Birthday Song 🎶</button>
   <!-- Play MP3 file instead of YouTube video -->
-  <audio id="song" src="Happy Birthday To You - THE KIBOOMERS Birthday Party Song for Kids.mp3" autoplay></audio>
+  <audio id="song" src="Happy Birthday To You - THE KIBOOMERS Birthday Party Song for Kids.mp3"></audio>
 
   <script>
     // Function to simulate the "blow" to extinguish the candle
     const flame = document.getElementById("flame");
     const song = document.getElementById("song");
+    const playMusicButton = document.getElementById("playMusicButton");
 
     function extinguishCandle() {
       flame.style.display = "none";
