@@ -101,19 +101,19 @@
     function startMusic() {
       song.play(); // Start the music
       playMusicButton.style.display = "none"; // Hide the button once the music starts
-      detectBlow(); // Start blow detection only after music starts
     }
 
     function extinguishCandle() {
       flame.style.display = "none";
       song.pause();  // Stop the MP3 song
+      
     }
 
       // Delay the "Happy Birthday!" message by 0.5 seconds for smoother effect
       setTimeout(() => {
         alert("Happy Birthday!");
       }, 500);
-    }
+    
 
     // Function to detect blowing sound with microphone
     async function detectBlow() {
