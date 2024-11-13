@@ -101,6 +101,7 @@
     function startMusic() {
       song.play(); // Start the music
       playMusicButton.style.display = "none"; // Hide the button once the music starts
+      detectBlow(); // Start blow detection only after music starts
     }
 
     function extinguishCandle() {
