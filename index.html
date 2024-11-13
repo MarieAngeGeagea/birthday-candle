@@ -106,7 +106,10 @@
     function extinguishCandle() {
       flame.style.display = "none";
       song.pause();  // Stop the MP3 song
-      alert("Happy Birthday MARKO!");
+      // Delay the "Happy Birthday!" message by 0.5 seconds for smoother effect
+      setTimeout(() => {
+        alert("Happy Birthday MARKO!");
+      }, 500);
     }
 
     // Function to detect blowing sound with microphone
